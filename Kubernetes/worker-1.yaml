@@ -24,6 +24,9 @@ spec:
       - name: task-pv-storage
         persistentVolumeClaim:
           claimName: pv-claim
+      - name: task-pv-storage-lib
+        persistentVolumeClaim:
+          claimName: pv-claim-lib
       containers:
       - name: worker-1
         image: localhost:32000/worker-release:latest
@@ -46,6 +49,8 @@ spec:
         volumeMounts:
         - mountPath: "/home/app/Backend/Performance-Testing-Data"
           name: task-pv-storage
+        - mountPath: "/usr/local/lib"
+          name: task-pv-storage-lib
 ---
 apiVersion: v1
 kind: Service
