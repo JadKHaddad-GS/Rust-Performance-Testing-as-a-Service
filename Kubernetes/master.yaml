@@ -42,7 +42,7 @@ spec:
         volumeMounts:
         - mountPath: "/home/app/Backend/Performance-Testing-Data"
           name: task-pv-storage
-        - mountPath: "/usr/local/lib"
+        - mountPath: "/usr/local/lib/pjsip"
           name: task-pv-storage-lib
         securityContext:
           allowPrivilegeEscalation: false
